@@ -6,9 +6,21 @@ export default function Sobre() {
   return (
     <section
       id="sobre"
-      className="relative overflow-hidden bg-canvas py-20 sm:py-32"
+      className="relative overflow-hidden bg-canvas pb-20 pt-16 sm:pb-32 sm:pt-24"
     >
+      {/* Smooth fade-in from dark previous section */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-ink/[0.04] to-transparent" />
       <div className="pointer-events-none absolute -left-32 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-gold/5 blur-3xl" />
+
+      {/* Section number marker */}
+      <div className="container-x relative">
+        <div className="flex items-center gap-3 pb-10 sm:pb-14">
+          <span className="font-display text-[10px] font-bold uppercase tracking-extra-wide text-ink/40">
+            01 — A empresa
+          </span>
+          <span className="h-px flex-1 bg-ink/10" />
+        </div>
+      </div>
 
       <div className="container-x relative">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -16,8 +28,8 @@ export default function Sobre() {
             <div className="corner-frame relative">
               <div className="aspect-[4/5] overflow-hidden bg-canvas-dim">
                 <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
-                  alt="Aplicação de ladrilhos em obra de remodelação"
+                  src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=80"
+                  alt="Espaço remodelado com piso flutuante e acabamentos profissionais"
                   className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-105"
                   loading="lazy"
                   decoding="async"
@@ -67,8 +79,8 @@ export default function Sobre() {
                 {[
                   { value: "100%", label: "Acompanhamento direto" },
                   { value: "7", label: "Áreas de especialidade" },
+                  { value: "24h", label: "Resposta rápida" },
                   { value: "PT", label: "Equipa em Portugal" },
-                  { value: "0€", label: "Orçamento sem compromisso" },
                 ].map((item) => (
                   <div
                     key={item.label}

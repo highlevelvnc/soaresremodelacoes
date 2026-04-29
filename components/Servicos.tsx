@@ -4,8 +4,21 @@ import Reveal from "./Reveal";
 
 export default function Servicos() {
   return (
-    <section id="servicos" className="relative bg-canvas-alt py-20 sm:py-32">
+    <section
+      id="servicos"
+      className="relative overflow-hidden bg-canvas-alt pb-20 pt-16 sm:pb-32 sm:pt-24"
+    >
       <div className="grid-pattern-light absolute inset-0 opacity-60" />
+
+      <div className="container-x relative">
+        <div className="flex items-center gap-3 pb-10 sm:pb-14">
+          <span className="font-display text-[10px] font-bold uppercase tracking-extra-wide text-ink/40">
+            02 — Serviços
+          </span>
+          <span className="h-px flex-1 bg-ink/10" />
+        </div>
+      </div>
+
       <div className="container-x relative">
         <Reveal>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">

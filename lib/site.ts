@@ -194,9 +194,16 @@ export const projects = [
   },
 ];
 
-export const heroStats = [
+type HeroStat = {
+  value: number;
+  suffix: string;
+  label: string;
+  display?: string;
+};
+
+export const heroStats: HeroStat[] = [
   { value: 7, suffix: "", label: "Especialidades" },
   { value: 24, suffix: "h", label: "Resposta WhatsApp" },
   { value: 100, suffix: "%", label: "Acompanhamento" },
-  { value: 0, suffix: "€", label: "Orçamento" },
+  { value: 0, suffix: "", label: "Equipa local", display: "PT" },
 ];

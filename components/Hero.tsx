@@ -131,7 +131,7 @@ export default function Hero() {
           {heroStats.map((s) => (
             <div key={s.label} className="flex flex-col gap-1">
               <span className="font-display text-2xl font-bold text-gold sm:text-4xl">
-                <Counter value={s.value} suffix={s.suffix} />
+                {s.display ? s.display : <Counter value={s.value} suffix={s.suffix} />}
               </span>
               <span className="font-display text-[10px] font-semibold uppercase tracking-extra-wide text-white/70 sm:text-[11px]">
                 {s.label}

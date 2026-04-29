@@ -4,8 +4,22 @@ import Reveal from "./Reveal";
 
 export default function Galeria() {
   return (
-    <section id="projetos" className="relative bg-canvas py-20 sm:py-32">
-      <div className="container-x">
+    <section
+      id="projetos"
+      className="relative overflow-hidden bg-canvas pb-20 pt-16 sm:pb-32 sm:pt-24"
+    >
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-ink/[0.04] to-transparent" />
+
+      <div className="container-x relative">
+        <div className="flex items-center gap-3 pb-10 sm:pb-14">
+          <span className="font-display text-[10px] font-bold uppercase tracking-extra-wide text-ink/40">
+            04 — Portfólio
+          </span>
+          <span className="h-px flex-1 bg-ink/10" />
+        </div>
+      </div>
+
+      <div className="container-x relative">
         <Reveal>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-2xl space-y-5">

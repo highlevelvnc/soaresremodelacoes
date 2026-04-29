@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Diferenciais() {
   return (
-    <section className="noise relative overflow-hidden bg-ink py-20 text-white tech-gradient sm:py-32">
+    <section className="noise relative overflow-hidden bg-ink pb-20 pt-16 text-white tech-gradient sm:pb-32 sm:pt-24">
       <div className="grid-pattern absolute inset-0 opacity-50" />
 
       {/* Animated gold beam at top */}
@@ -23,6 +23,13 @@ export default function Diferenciais() {
       <div className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rotate-45 border border-gold/10" />
 
       <div className="container-x relative">
+        <div className="flex items-center gap-3 pb-10 sm:pb-14">
+          <span className="font-display text-[10px] font-bold uppercase tracking-extra-wide text-white/40">
+            03 — Diferenciais
+          </span>
+          <span className="h-px flex-1 bg-white/10" />
+        </div>
+
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <Reveal>
