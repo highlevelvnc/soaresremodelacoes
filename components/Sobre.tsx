@@ -6,12 +6,12 @@ export default function Sobre() {
   return (
     <section
       id="sobre"
-      className="relative overflow-hidden bg-canvas py-24 sm:py-32"
+      className="relative overflow-hidden bg-canvas py-20 sm:py-32"
     >
       <div className="pointer-events-none absolute -left-32 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-gold/5 blur-3xl" />
 
       <div className="container-x relative">
-        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal variant="left" className="order-2 lg:order-1">
             <div className="corner-frame relative">
               <div className="aspect-[4/5] overflow-hidden bg-canvas-dim">

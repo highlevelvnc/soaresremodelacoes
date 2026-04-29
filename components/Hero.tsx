@@ -68,14 +68,14 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-20 top-1/4 -z-10 hidden h-64 w-64 rotate-45 border border-gold/20 lg:block" />
       <div className="pointer-events-none absolute -right-12 bottom-12 -z-10 hidden h-48 w-48 rotate-12 border border-gold/15 lg:block" />
 
-      <div className="container-x relative z-10 flex flex-col gap-10 py-32 pt-40 text-white sm:py-36 lg:py-40">
-        <div className="flex max-w-3xl flex-col gap-7">
+      <div className="container-x relative z-10 flex flex-col gap-8 py-28 pt-32 text-white sm:gap-10 sm:py-36 sm:pt-40 lg:py-40">
+        <div className="flex max-w-3xl flex-col gap-5 sm:gap-7">
           <div
-            className="flex items-center gap-4 opacity-0 animate-fade-up"
+            className="flex items-center gap-3 opacity-0 animate-fade-up sm:gap-4"
             style={{ animationDelay: "100ms" }}
           >
-            <span className="block h-px w-12 bg-gold" />
-            <span className="font-display text-[11px] font-bold uppercase tracking-extra-wide text-gold">
+            <span className="block h-px w-8 bg-gold sm:w-12" />
+            <span className="font-display text-[10px] font-bold uppercase tracking-extra-wide text-gold sm:text-[11px]">
               Soares Remodelações · {site.region}
             </span>
             <span className="hidden h-1 w-1 animate-pulse bg-gold sm:block" />
@@ -125,15 +125,15 @@ export default function Hero() {
 
         {/* Hero stats */}
         <div
-          className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-x-8 gap-y-6 border-t border-white/15 pt-8 opacity-0 animate-fade-up sm:grid-cols-4 sm:gap-x-12"
+          className="mt-4 grid w-full max-w-3xl grid-cols-2 gap-x-6 gap-y-5 border-t border-white/15 pt-6 opacity-0 animate-fade-up sm:mt-6 sm:grid-cols-4 sm:gap-x-12 sm:gap-y-6 sm:pt-8"
           style={{ animationDelay: "600ms" }}
         >
           {heroStats.map((s) => (
             <div key={s.label} className="flex flex-col gap-1">
-              <span className="font-display text-3xl font-bold text-gold sm:text-4xl">
+              <span className="font-display text-2xl font-bold text-gold sm:text-4xl">
                 <Counter value={s.value} suffix={s.suffix} />
               </span>
-              <span className="font-display text-[11px] font-semibold uppercase tracking-extra-wide text-white/70">
+              <span className="font-display text-[10px] font-semibold uppercase tracking-extra-wide text-white/70 sm:text-[11px]">
                 {s.label}
               </span>
             </div>

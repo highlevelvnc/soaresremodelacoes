@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Galeria() {
   return (
-    <section id="projetos" className="relative bg-canvas py-24 sm:py-32">
+    <section id="projetos" className="relative bg-canvas py-20 sm:py-32">
       <div className="container-x">
         <Reveal>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -28,7 +28,7 @@ export default function Galeria() {
           </div>
         </Reveal>
 
-        <div className="mt-14 grid auto-rows-[260px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid auto-rows-[220px] grid-cols-1 gap-3 sm:mt-14 sm:auto-rows-[260px] sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
           {projects.map((project, idx) => (
             <Reveal
               key={project.title}

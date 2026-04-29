@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Servicos() {
   return (
-    <section id="servicos" className="relative bg-canvas-alt py-24 sm:py-32">
+    <section id="servicos" className="relative bg-canvas-alt py-20 sm:py-32">
       <div className="grid-pattern-light absolute inset-0 opacity-60" />
       <div className="container-x relative">
         <Reveal>
@@ -23,7 +23,7 @@ export default function Servicos() {
           </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {services.map((service, index) => {
             const Icon = serviceIcons[service.icon];
             return (

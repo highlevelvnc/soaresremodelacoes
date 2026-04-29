@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Diferenciais() {
   return (
-    <section className="noise relative overflow-hidden bg-ink py-24 text-white tech-gradient sm:py-32">
+    <section className="noise relative overflow-hidden bg-ink py-20 text-white tech-gradient sm:py-32">
       <div className="grid-pattern absolute inset-0 opacity-50" />
 
       {/* Animated gold beam at top */}
@@ -23,7 +23,7 @@ export default function Diferenciais() {
       <div className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rotate-45 border border-gold/10" />
 
       <div className="container-x relative">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <Reveal>
               <span className="eyebrow !text-gold">Porque escolher-nos</span>
@@ -55,7 +55,7 @@ export default function Diferenciais() {
                   ];
                 return (
                   <Reveal key={item.title} delay={idx * 70} variant="fade">
-                    <div className="group relative flex h-full gap-5 overflow-hidden bg-ink p-7 transition-all duration-500 hover:bg-ink-soft">
+                    <div className="group relative flex h-full gap-4 overflow-hidden bg-ink p-5 transition-all duration-500 hover:bg-ink-soft sm:gap-5 sm:p-7">
                       <div className="absolute inset-y-0 left-0 w-0 bg-gold/[0.04] transition-all duration-500 group-hover:w-full" />
                       <span className="absolute right-5 top-5 font-display text-[10px] font-semibold tracking-extra-wide text-white/20">
                         0{idx + 1}

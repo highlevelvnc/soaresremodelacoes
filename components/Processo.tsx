@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function Processo() {
   return (
-    <section className="relative overflow-hidden bg-canvas-alt py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-canvas-alt py-20 sm:py-32">
       <div className="grid-pattern-light absolute inset-0 opacity-50" />
       <div className="container-x relative">
         <Reveal>
@@ -41,7 +41,7 @@ export default function Processo() {
           <div className="grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((step, index) => (
               <Reveal key={step.step} delay={index * 120}>
-                <div className="group relative flex h-full flex-col gap-5 bg-canvas-alt p-8 transition-all duration-500 hover:bg-white">
+                <div className="group relative flex h-full flex-col gap-4 bg-canvas-alt p-6 transition-all duration-500 hover:bg-white sm:gap-5 sm:p-8">
                   <div className="absolute inset-x-0 top-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
 
                   <div className="flex items-baseline gap-3">
