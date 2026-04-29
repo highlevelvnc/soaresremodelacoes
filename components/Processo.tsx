@@ -22,8 +22,21 @@ export default function Processo() {
         </Reveal>
 
         <div className="relative mt-16">
-          {/* Connecting line */}
+          {/* Connecting line with gold accent dots */}
           <div className="pointer-events-none absolute left-0 right-0 top-[68px] hidden h-px bg-gradient-to-r from-transparent via-ink/20 to-transparent lg:block" />
+          <div
+            className="pointer-events-none absolute left-0 right-0 top-[64px] hidden lg:flex"
+            aria-hidden
+          >
+            <div className="container-x flex items-center justify-around">
+              {[0, 1, 2, 3].map((i) => (
+                <span
+                  key={i}
+                  className="block h-2 w-2 rounded-full bg-gold/80 ring-4 ring-canvas-alt"
+                />
+              ))}
+            </div>
+          </div>
 
           <div className="grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((step, index) => (

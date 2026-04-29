@@ -36,49 +36,49 @@ export const services: Service[] = [
     id: "pladur",
     title: "Pladur",
     description:
-      "Aplicação de pladur para paredes, tetos falsos, divisórias e soluções modernas para interiores.",
+      "Paredes, tetos falsos, sancas e divisórias com acabamento liso, pronto a pintar.",
     icon: "pladur",
   },
   {
     id: "piso-flutuante",
     title: "Piso flutuante",
     description:
-      "Instalação de piso flutuante com acabamento limpo, moderno e resistente.",
+      "Aplicação de pavimento flutuante com nivelamento cuidado e remates limpos.",
     icon: "floor",
   },
   {
     id: "instalacao-equipamentos",
     title: "Instalação de equipamentos",
     description:
-      "Instalação de equipamentos e pequenos ajustes técnicos para deixar o espaço funcional e pronto a usar.",
+      "Montagem de eletrodomésticos, sanitários e mobiliário, com acabamentos prontos a usar.",
     icon: "tools",
   },
   {
     id: "remodelacao",
     title: "Remodelação",
     description:
-      "Remodelações completas ou parciais para habitações, lojas e espaços comerciais.",
+      "Obras totais ou parciais em casas, apartamentos, lojas e espaços comerciais.",
     icon: "remodel",
   },
   {
     id: "canalizacao",
     title: "Canalização",
     description:
-      "Serviços de canalização para reparações, substituições e instalações.",
+      "Reparações, substituições e novas instalações de canalização com garantia de estanquicidade.",
     icon: "plumbing",
   },
   {
     id: "pinturas",
     title: "Pinturas",
     description:
-      "Pinturas interiores e exteriores com preparação adequada e acabamento profissional.",
+      "Interiores e exteriores com preparação de superfícies e tintas de qualidade profissional.",
     icon: "paint",
   },
   {
     id: "ladrilhos",
     title: "Ladrilhos",
     description:
-      "Aplicação de ladrilhos em cozinhas, casas de banho, pavimentos e revestimentos.",
+      "Aplicação de azulejo e mosaico em cozinhas, casas de banho, pavimentos e revestimentos.",
     icon: "tile",
   },
 ];
@@ -87,37 +87,37 @@ export const differentiators = [
   {
     title: "Atendimento direto",
     description:
-      "Falamos diretamente consigo do primeiro contacto à entrega da obra.",
+      "Falamos consigo do primeiro contacto à entrega — sem intermediários a perder informação.",
     icon: "support",
   },
   {
     title: "Orçamento personalizado",
     description:
-      "Cada espaço é único — preparamos uma proposta clara e adaptada ao seu projeto.",
+      "Cada espaço é único. Preparamos uma proposta clara, detalhada e sem compromisso.",
     icon: "quote",
   },
   {
     title: "Qualidade nos acabamentos",
     description:
-      "Rigor estético e técnico em cada detalhe para um resultado duradouro.",
+      "Rigor estético e técnico em cada detalhe, dos remates às juntas, para um resultado duradouro.",
     icon: "verified",
   },
   {
     title: "Cumprimento de prazos",
     description:
-      "Planeamento realista e execução eficiente para entregar dentro do tempo combinado.",
+      "Planeamos com realismo e executamos com método para entregar dentro do tempo combinado.",
     icon: "clock",
   },
   {
     title: "Equipa experiente",
     description:
-      "Profissionais qualificados em todas as áreas da obra, do pladur à pintura.",
+      "Profissionais qualificados em cada área da obra — do pladur à pintura, do piso à canalização.",
     icon: "team",
   },
   {
     title: "Soluções completas",
     description:
-      "Da pequena reparação à remodelação integral — tratamos de tudo numa só equipa.",
+      "Da pequena reparação à remodelação integral, tratamos de tudo numa só equipa de confiança.",
     icon: "layers",
   },
 ];
@@ -127,25 +127,25 @@ export const process = [
     step: "01",
     title: "Contacto inicial",
     description:
-      "Apresente-nos a ideia ou necessidade do seu espaço, sem compromisso.",
+      "Fale connosco pelo WhatsApp ou telefone e descreva-nos a sua ideia ou necessidade.",
   },
   {
     step: "02",
     title: "Análise do serviço",
     description:
-      "Avaliamos o local e estudamos a melhor solução técnica para o projeto.",
+      "Avaliamos o local, esclarecemos dúvidas e estudamos a melhor solução técnica.",
   },
   {
     step: "03",
     title: "Orçamento personalizado",
     description:
-      "Receberá uma proposta detalhada, transparente e adaptada à sua obra.",
+      "Recebe uma proposta clara e detalhada, com prazos, materiais e valores transparentes.",
   },
   {
     step: "04",
     title: "Execução da obra",
     description:
-      "Mãos à obra com acompanhamento constante até à entrega final.",
+      "Mãos à obra com rigor e acompanhamento permanente até à entrega final.",
   },
 ];
 
@@ -161,28 +161,28 @@ export const projects = [
     title: "Casa de banho moderna",
     category: "Ladrilhos & canalização",
     image:
-      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=80",
     span: "",
   },
   {
-    title: "Sala com piso flutuante",
-    category: "Piso flutuante & pintura",
+    title: "Pintura profissional",
+    category: "Pinturas",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80",
     span: "",
   },
   {
     title: "Teto falso em pladur",
     category: "Pladur & iluminação",
     image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80",
     span: "",
   },
   {
-    title: "Pintura interior",
-    category: "Pinturas",
+    title: "Aplicação de ladrilhos",
+    category: "Ladrilhos",
     image:
-      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80",
     span: "",
   },
   {
@@ -192,4 +192,11 @@ export const projects = [
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
     span: "lg:col-span-2",
   },
+];
+
+export const heroStats = [
+  { value: 7, suffix: "", label: "Especialidades" },
+  { value: 24, suffix: "h", label: "Resposta WhatsApp" },
+  { value: 100, suffix: "%", label: "Acompanhamento" },
+  { value: 0, suffix: "€", label: "Orçamento" },
 ];

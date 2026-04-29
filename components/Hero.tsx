@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { site } from "@/lib/site";
+import { heroStats, site } from "@/lib/site";
 import Counter from "./Counter";
 import { ArrowRightIcon, WhatsAppIcon } from "./Icons";
 import MagneticButton from "./MagneticButton";
 
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80";
+
 export default function Hero() {
   const imgRef = useRef<HTMLImageElement | null>(null);
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -19,7 +21,7 @@ export default function Hero() {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
         const y = window.scrollY;
-        if (imgRef.current) {
+        if (imgRef.current && y < 1200) {
           imgRef.current.style.transform = `translate3d(0, ${y * 0.18}px, 0) scale(1.1)`;
         }
       });
@@ -32,12 +34,6 @@ export default function Hero() {
     };
   }, []);
 
-  useEffect(() => {
-    if (titleRef.current) {
-      titleRef.current.classList.add("animate-fade-up");
-    }
-  }, []);
-
   return (
     <section
       id="inicio"
@@ -46,10 +42,12 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10">
         <img
           ref={imgRef}
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80"
-          alt="Interior moderno remodelado"
+          src={HERO_IMAGE}
+          alt="Cozinha moderna remodelada com acabamento profissional"
           className="h-full w-full object-cover will-change-transform"
           style={{ transform: "scale(1.1)" }}
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-ink/55 lg:bg-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-ink/55 lg:via-ink/70 lg:to-ink/30" />
@@ -84,8 +82,7 @@ export default function Hero() {
           </div>
 
           <h1
-            ref={titleRef}
-            className="heading-display text-balance text-white opacity-0"
+            className="heading-display text-balance text-white opacity-0 animate-fade-up"
             style={{ animationDelay: "200ms" }}
           >
             Remodelações com{" "}
@@ -97,11 +94,12 @@ export default function Hero() {
           </h1>
 
           <p
-            className="body-lg max-w-2xl text-white/80 opacity-0 animate-fade-up"
+            className="body-lg max-w-2xl text-white/85 opacity-0 animate-fade-up"
             style={{ animationDelay: "320ms" }}
           >
-            Serviços de pladur, piso flutuante, canalização, pinturas,
-            ladrilhos, instalação de equipamentos e remodelações em geral.
+            Pladur, piso flutuante, canalização, pinturas, ladrilhos,
+            instalação de equipamentos e remodelações em geral — tudo numa só
+            equipa de confiança em Portugal.
           </p>
 
           <div
@@ -130,12 +128,7 @@ export default function Hero() {
           className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-x-8 gap-y-6 border-t border-white/15 pt-8 opacity-0 animate-fade-up sm:grid-cols-4 sm:gap-x-12"
           style={{ animationDelay: "600ms" }}
         >
-          {[
-            { value: 100, suffix: "%", label: "Satisfação" },
-            { value: 10, suffix: "+", label: "Anos a remodelar" },
-            { value: 7, suffix: "", label: "Áreas de obra" },
-            { value: 0, suffix: "€", label: "Orçamento" },
-          ].map((s) => (
+          {heroStats.map((s) => (
             <div key={s.label} className="flex flex-col gap-1">
               <span className="font-display text-3xl font-bold text-gold sm:text-4xl">
                 <Counter value={s.value} suffix={s.suffix} />

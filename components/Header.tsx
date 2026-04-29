@@ -63,17 +63,34 @@ export default function Header() {
           href="#inicio"
           className="group flex items-center gap-3"
           onClick={() => setOpen(false)}
+          aria-label="Soares Remodelações — ir para o início"
         >
-          <Image
-            src="/logo.png"
-            alt="Soares Remodelações"
-            width={48}
-            height={48}
-            className={`object-contain transition-all duration-500 ${
-              scrolled ? "h-9 w-9" : "h-11 w-11"
+          <span
+            className={`relative inline-flex items-center justify-center transition-all duration-500 ${
+              scrolled ? "h-10 w-10" : "h-12 w-12"
             }`}
-            priority
-          />
+          >
+            <Image
+              src="/logo.png"
+              alt=""
+              width={56}
+              height={56}
+              className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${
+                scrolled ? "opacity-100" : "opacity-0"
+              }`}
+              priority
+            />
+            <Image
+              src="/logo-light.png"
+              alt=""
+              width={56}
+              height={56}
+              className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${
+                scrolled ? "opacity-0" : "opacity-100"
+              }`}
+              priority
+            />
+          </span>
           <div className="leading-none">
             <span
               className={`block font-display font-extrabold uppercase tracking-tight transition-colors duration-300 ${

@@ -67,6 +67,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-PT" className={`${workSans.variable} ${inter.variable}`}>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
+          fetchPriority="high"
+        />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+      </head>
       <body className="font-body antialiased">{children}</body>
     </html>
   );

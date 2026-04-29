@@ -30,7 +30,8 @@ export default function Diferenciais() {
             </Reveal>
             <Reveal delay={120}>
               <h2 className="heading-section mt-5 text-balance text-white">
-                Confiança construída obra a obra, com rigor e bom acabamento.
+                Confiança construída obra a obra. Profissionalismo que se vê em
+                cada detalhe.
               </h2>
             </Reveal>
             <Reveal delay={200}>
@@ -38,9 +39,9 @@ export default function Diferenciais() {
             </Reveal>
             <Reveal delay={280}>
               <p className="mt-7 max-w-md text-base leading-relaxed text-white/70 sm:text-lg">
-                A nossa prioridade é entregar tranquilidade ao cliente. Falamos
-                consigo de forma direta, planeamos a obra com clareza e
-                executamos com a qualidade que se vê no detalhe.
+                Queremos que receba a obra com a tranquilidade de saber que
+                tudo foi pensado, planeado e executado por quem entende do
+                ofício.
               </p>
             </Reveal>
           </div>

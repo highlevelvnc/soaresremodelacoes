@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="lg:col-span-5">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo.png"
+              src="/logo-light.png"
               alt="Soares Remodelações"
               width={56}
               height={56}
@@ -29,8 +29,15 @@ export default function Footer() {
           <p className="mt-6 max-w-md text-sm leading-relaxed text-white/70">
             Soluções completas de remodelação em Portugal. Pladur, piso
             flutuante, canalização, pinturas, ladrilhos e instalação de
-            equipamentos com qualidade, compromisso e bom acabamento.
+            equipamentos — com qualidade, compromisso e bom acabamento.
           </p>
+
+          <div className="mt-6 flex items-center gap-3 text-xs text-white/50">
+            <span className="inline-flex h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+            <span className="font-display uppercase tracking-extra-wide">
+              Disponíveis para novos projetos
+            </span>
+          </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a

@@ -25,16 +25,17 @@ export default function CTAFinal() {
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <Reveal variant="left">
             <div className="space-y-6">
-              <span className="font-display text-[11px] font-bold uppercase tracking-extra-wide text-ink/70">
+              <span className="inline-flex items-center gap-3 font-display text-[11px] font-bold uppercase tracking-extra-wide text-ink/70">
+                <span className="inline-flex h-2 w-2 animate-pulse rounded-full bg-ink" />
                 Pronto para começar?
               </span>
               <h2 className="heading-section text-balance text-ink">
                 Precisa de uma remodelação ou reparação?
               </h2>
               <p className="max-w-lg text-base leading-relaxed text-ink/80 sm:text-lg">
-                Entre em contacto com a Soares Remodelações e peça um
-                orçamento sem compromisso. Respondemos rapidamente pelo
-                WhatsApp.
+                Fale connosco hoje pelo WhatsApp e receba um orçamento
+                personalizado, sem compromisso. Respondemos com rapidez para
+                não perder tempo na sua obra.
               </p>
             </div>
           </Reveal>

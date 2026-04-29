@@ -11,8 +11,7 @@ export default function Galeria() {
             <div className="max-w-2xl space-y-5">
               <span className="eyebrow">Projetos</span>
               <h2 className="heading-section text-balance">
-                Trabalhos recentes onde a qualidade está visível em cada
-                acabamento.
+                Obras onde a qualidade se vê do primeiro ao último detalhe.
               </h2>
             </div>
             <a
@@ -40,14 +39,16 @@ export default function Galeria() {
               <article className="group relative h-full overflow-hidden bg-ink">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} — ${project.category}`}
                   className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent opacity-90 transition-opacity duration-500 group-hover:from-ink/95" />
 
                 {/* Gold corner brackets */}
-                <span className="pointer-events-none absolute left-4 top-4 h-6 w-6 border-l-2 border-t-2 border-gold opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 -translate-x-2 -translate-y-2" />
-                <span className="pointer-events-none absolute right-4 bottom-4 h-6 w-6 border-r-2 border-b-2 border-gold opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100 translate-x-2 translate-y-2" />
+                <span className="pointer-events-none absolute left-4 top-4 h-6 w-6 -translate-x-2 -translate-y-2 border-l-2 border-t-2 border-gold opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" />
+                <span className="pointer-events-none absolute bottom-4 right-4 h-6 w-6 translate-x-2 translate-y-2 border-b-2 border-r-2 border-gold opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" />
 
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
                   <span className="inline-flex w-fit bg-gold px-3 py-1 font-display text-[10px] font-bold uppercase tracking-extra-wide text-ink transition-transform duration-500 group-hover:-translate-y-1">
@@ -57,7 +58,7 @@ export default function Galeria() {
                     {project.title}
                   </h3>
                   <span className="mt-2 inline-flex translate-y-3 items-center gap-2 font-display text-[11px] font-semibold uppercase tracking-extra-wide text-white/80 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    Ver projeto
+                    Falar pelo WhatsApp
                     <ArrowRightIcon className="h-4 w-4" />
                   </span>
                 </div>

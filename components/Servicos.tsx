@@ -10,15 +10,15 @@ export default function Servicos() {
         <Reveal>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="max-w-2xl space-y-5">
-              <span className="eyebrow">Serviços</span>
+              <span className="eyebrow">Especialidades</span>
               <h2 className="heading-section text-balance">
-                Tudo o que a sua obra precisa, num único parceiro de confiança.
+                Sete especialidades, uma só equipa para a sua obra.
               </h2>
             </div>
             <p className="max-w-md text-base text-ink/70">
-              Combinamos várias especialidades para tratar do projeto de ponta
-              a ponta — sem subcontratações desconhecidas e com
-              responsabilidade única.
+              Reunimos numa equipa as áreas mais procuradas em remodelação —
+              tratamos do projeto de ponta a ponta, com responsabilidade
+              única.
             </p>
           </div>
         </Reveal>

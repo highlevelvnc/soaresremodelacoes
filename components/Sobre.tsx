@@ -16,9 +16,11 @@ export default function Sobre() {
             <div className="corner-frame relative">
               <div className="aspect-[4/5] overflow-hidden bg-canvas-dim">
                 <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=80"
-                  alt="Profissional a executar acabamentos de remodelação"
+                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
+                  alt="Aplicação de ladrilhos em obra de remodelação"
                   className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 hidden bg-ink p-7 text-white sm:block lg:-bottom-8 lg:-left-8 lg:right-auto">
@@ -29,7 +31,6 @@ export default function Sobre() {
                   — Soares Remodelações
                 </span>
               </div>
-              {/* Floating accent square */}
               <div className="absolute -right-4 top-12 hidden h-16 w-16 border-2 border-gold/40 lg:block animate-float-slow" />
             </div>
           </Reveal>
@@ -40,24 +41,23 @@ export default function Sobre() {
             </Reveal>
             <Reveal variant="right" delay={200}>
               <h2 className="heading-section text-balance">
-                Soluções completas de remodelação, com foco em qualidade e
-                cumprimento de prazos.
+                Uma equipa portuguesa que entrega obras com rigor e bom
+                acabamento.
               </h2>
             </Reveal>
             <Reveal variant="right" delay={280}>
               <div className="space-y-5 text-base leading-relaxed text-ink/70 sm:text-lg">
                 <p>
                   A <strong className="text-ink">Soares Remodelações</strong>{" "}
-                  é uma equipa portuguesa dedicada a serviços completos de
-                  remodelação. Trabalhamos em casas, apartamentos, lojas e
-                  espaços comerciais, oferecendo soluções integradas — do
-                  pladur à pintura, da canalização aos ladrilhos.
+                  está focada em serviços completos de remodelação para
+                  habitações, lojas e espaços comerciais. Tratamos do projeto
+                  de ponta a ponta — do pladur à pintura, dos ladrilhos à
+                  canalização — sem subcontratações desconhecidas.
                 </p>
                 <p>
-                  A nossa proposta é simples: bom acabamento, comunicação
-                  direta e prazos cumpridos. Cada projeto é tratado com rigor
-                  técnico e atenção ao detalhe, para que o resultado final
-                  transmita o profissionalismo que o cliente merece.
+                  Trabalhamos com comunicação direta, planeamento realista e
+                  acabamentos cuidados. O resultado é uma obra entregue dentro
+                  do prazo, com qualidade visível em cada detalhe.
                 </p>
               </div>
             </Reveal>
@@ -65,7 +65,7 @@ export default function Sobre() {
             <Reveal variant="up" delay={360}>
               <div className="grid grid-cols-2 gap-6 border-t border-ink/10 pt-8">
                 {[
-                  { value: "100%", label: "Acabamento profissional" },
+                  { value: "100%", label: "Acompanhamento direto" },
                   { value: "7", label: "Áreas de especialidade" },
                   { value: "PT", label: "Equipa em Portugal" },
                   { value: "0€", label: "Orçamento sem compromisso" },
