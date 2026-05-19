@@ -16,42 +16,82 @@ const inter = Inter({
   display: "swap",
 });
 
+const TITLE =
+  "Soares Remodelações | Pladur, Pinturas, Canalização e Remodelações em Portugal";
+const DESCRIPTION =
+  "Empresa de remodelações em Portugal. Pladur, piso flutuante, canalização, pinturas, ladrilhos e instalação de equipamentos com acabamento profissional. Orçamento sem compromisso pelo WhatsApp.";
+
 export const metadata: Metadata = {
-  title:
-    "Soares Remodelações | Remodelações, Pladur, Pinturas e Canalização",
-  description:
-    "Serviços de remodelação, pladur, piso flutuante, canalização, pinturas, ladrilhos e instalação de equipamentos em Portugal.",
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: "Soares Remodelações",
   keywords: [
-    "remodelações",
+    "remodelações Portugal",
+    "remodelações Lisboa",
+    "empresa de remodelações",
     "pladur",
+    "tetos falsos pladur",
     "piso flutuante",
     "canalização",
-    "pinturas",
+    "pinturas interiores e exteriores",
     "ladrilhos",
+    "azulejos",
     "instalação de equipamentos",
-    "Portugal",
+    "remodelação de cozinhas",
+    "remodelação de casas de banho",
     "Soares Remodelações",
   ],
   authors: [{ name: "Soares Remodelações" }],
+  creator: "Soares Remodelações",
+  publisher: "Soares Remodelações",
   metadataBase: new URL("https://soaresremodelacoes.pt"),
+  alternates: {
+    canonical: "/",
+  },
+  formatDetection: {
+    telephone: true,
+    address: true,
+    email: true,
+  },
   openGraph: {
-    title: "Soares Remodelações | Remodelações com qualidade em Portugal",
-    description:
-      "Serviços de remodelação, pladur, piso flutuante, canalização, pinturas, ladrilhos e instalação de equipamentos.",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "https://soaresremodelacoes.pt",
     locale: "pt_PT",
     type: "website",
     siteName: "Soares Remodelações",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Soares Remodelações — Remodelações com qualidade em Portugal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soares Remodelações",
-    description:
-      "Remodelações, pladur, pinturas, canalização e ladrilhos em Portugal.",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
+    shortcut: "/logo.png",
   },
+  category: "Construção e remodelações",
 };
 
 export const viewport: Viewport = {
@@ -68,13 +108,8 @@ export default function RootLayout({
   return (
     <html lang="pt-PT" className={`${workSans.variable} ${inter.variable}`}>
       <head>
-        <link
-          rel="preload"
-          as="image"
-          href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
-          fetchPriority="high"
-        />
         <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body className="font-body antialiased">{children}</body>
     </html>

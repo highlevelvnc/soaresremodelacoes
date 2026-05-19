@@ -102,7 +102,15 @@ export default function Footer() {
             © {year} Soares Remodelações. Todos os direitos reservados.
           </p>
           <p className="font-display text-[11px] uppercase tracking-extra-wide text-white/50">
-            Feito com rigor em Portugal
+            Site criado por{" "}
+            <a
+              href="https://highlevelmkt.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gold transition-colors hover:text-gold-300"
+            >
+              highlevelmkt.com
+            </a>
           </p>
         </div>
       </div>

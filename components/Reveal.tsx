@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 type Variant = "up" | "fade" | "left" | "right" | "scale";
 
@@ -12,26 +12,6 @@ type Props = {
   className?: string;
 };
 
-const variants: Record<Variant, { hidden: string; visible: string }> = {
-  up: {
-    hidden: "opacity-0 translate-y-8",
-    visible: "opacity-100 translate-y-0",
-  },
-  fade: { hidden: "opacity-0", visible: "opacity-100" },
-  left: {
-    hidden: "opacity-0 -translate-x-8",
-    visible: "opacity-100 translate-x-0",
-  },
-  right: {
-    hidden: "opacity-0 translate-x-8",
-    visible: "opacity-100 translate-x-0",
-  },
-  scale: {
-    hidden: "opacity-0 scale-[0.96]",
-    visible: "opacity-100 scale-100",
-  },
-};
-
 export default function Reveal({
   children,
   as = "div",
@@ -40,7 +20,6 @@ export default function Reveal({
   className = "",
 }: Props) {
   const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -50,15 +29,17 @@ export default function Reveal({
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
-      setVisible(true);
+      el.setAttribute("data-revealed", "true");
       return;
     }
+
+    el.setAttribute("data-revealed", "false");
 
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            setVisible(true);
+            entry.target.setAttribute("data-revealed", "true");
             observer.unobserve(entry.target);
           }
         }
@@ -67,19 +48,25 @@ export default function Reveal({
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+
+    const safety = setTimeout(() => {
+      el.setAttribute("data-revealed", "true");
+    }, 3500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(safety);
+    };
   }, []);
 
   const Tag = as as any;
-  const v = variants[variant];
 
   return (
     <Tag
       ref={ref as any}
+      data-reveal={variant}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transform-gpu transition-all duration-700 ease-out will-change-transform ${
-        visible ? v.visible : v.hidden
-      } ${className}`}
+      className={className}
     >
       {children}
     </Tag>

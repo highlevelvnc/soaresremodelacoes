@@ -153,6 +153,7 @@ export const projects = [
   {
     title: "Cozinha contemporânea",
     category: "Remodelação completa",
+    alt: "Remodelação completa de cozinha contemporânea — armários, bancada e iluminação por Soares Remodelações",
     image:
       "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1600&q=80",
     span: "lg:col-span-2 lg:row-span-2",
@@ -160,6 +161,7 @@ export const projects = [
   {
     title: "Casa de banho moderna",
     category: "Ladrilhos & canalização",
+    alt: "Casa de banho remodelada com ladrilhos modernos e canalização nova",
     image:
       "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=80",
     span: "",
@@ -167,6 +169,7 @@ export const projects = [
   {
     title: "Pintura profissional",
     category: "Pinturas",
+    alt: "Pintura interior profissional em habitação — preparação de superfícies e tintas de qualidade",
     image:
       "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80",
     span: "",
@@ -174,6 +177,7 @@ export const projects = [
   {
     title: "Teto falso em pladur",
     category: "Pladur & iluminação",
+    alt: "Teto falso em pladur com sancas e iluminação embutida — execução pela Soares Remodelações",
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80",
     span: "",
@@ -181,6 +185,7 @@ export const projects = [
   {
     title: "Aplicação de ladrilhos",
     category: "Ladrilhos",
+    alt: "Aplicação de ladrilhos cerâmicos em pavimento e revestimento de parede",
     image:
       "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80",
     span: "",
@@ -188,6 +193,7 @@ export const projects = [
   {
     title: "Espaço comercial",
     category: "Remodelação integral",
+    alt: "Remodelação integral de espaço comercial em Portugal — pladur, pinturas e pavimentos",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
     span: "lg:col-span-2",

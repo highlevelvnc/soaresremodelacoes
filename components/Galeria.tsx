@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects, site } from "@/lib/site";
 import { ArrowRightIcon } from "./Icons";
 import Reveal from "./Reveal";
@@ -51,12 +52,12 @@ export default function Galeria() {
               className={project.span}
             >
               <article className="group relative h-full overflow-hidden bg-ink">
-                <img
+                <Image
                   src={project.image}
-                  alt={`${project.title} — ${project.category}`}
-                  className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
-                  loading="lazy"
-                  decoding="async"
+                  alt={project.alt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent opacity-90 transition-opacity duration-500 group-hover:from-ink/95" />
 

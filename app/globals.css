@@ -11,6 +11,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+  overflow-x: clip;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -24,7 +28,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: default;
-  overflow-x: hidden;
+}
+
+/* Anchor offset for sticky header */
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 ::selection {
@@ -241,6 +249,46 @@ a:focus-visible {
 
   .mask-fade-y {
     mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+  }
+}
+
+/* === Reveal on scroll (visible-by-default + IO + fallback) === */
+
+[data-reveal] {
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal][data-revealed="false"] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+}
+
+[data-reveal="fade"][data-revealed="false"] {
+  transform: none;
+}
+
+[data-reveal="left"][data-revealed="false"] {
+  transform: translate3d(-40px, 0, 0);
+}
+
+[data-reveal="right"][data-revealed="false"] {
+  transform: translate3d(40px, 0, 0);
+}
+
+[data-reveal="scale"][data-revealed="false"] {
+  transform: scale(0.96);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal][data-revealed="false"] {
+    opacity: 1;
+    transform: none;
+  }
+  [data-reveal] {
+    transition: none;
   }
 }
 

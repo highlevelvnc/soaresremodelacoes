@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site } from "@/lib/site";
 import { ArrowRightIcon } from "./Icons";
 import Reveal from "./Reveal";
@@ -26,13 +27,13 @@ export default function Sobre() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal variant="left" className="order-2 lg:order-1">
             <div className="corner-frame relative">
-              <div className="aspect-[4/5] overflow-hidden bg-canvas-dim">
-                <img
+              <div className="relative aspect-[4/5] overflow-hidden bg-canvas-dim">
+                <Image
                   src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=80"
-                  alt="Espaço remodelado com piso flutuante e acabamentos profissionais"
-                  className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
+                  alt="Equipa Soares Remodelações em obra — piso flutuante e acabamentos profissionais em Portugal"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-[1200ms] ease-out hover:scale-105"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 hidden bg-ink p-7 text-white sm:block lg:-bottom-8 lg:-left-8 lg:right-auto">
