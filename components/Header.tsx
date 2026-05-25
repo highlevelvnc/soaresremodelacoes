@@ -47,13 +47,14 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.06)]"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div
+        className={`transition-all duration-500 ${
+          scrolled
+            ? "bg-white/95 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.06)]"
+            : "bg-transparent"
+        }`}
+      >
       <div
         className={`container-x flex items-center justify-between transition-all duration-500 ${
           scrolled ? "h-16" : "h-20"
@@ -170,12 +171,14 @@ export default function Header() {
         </div>
       </div>
 
+      </div>
+
       {/* Mobile menu */}
       <div
         className={`lg:hidden ${
           open
             ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+            : "pointer-events-none invisible opacity-0"
         } transition-opacity duration-300`}
       >
         <div className="border-t border-ink/10 bg-white">
